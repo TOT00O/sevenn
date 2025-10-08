@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1368e81kivay"]
+
+[ext_resource type="Texture2D" uid="uid://1l5a32jljbuw" path="res://page.jpg" id="1_6quti"]
+
+[sub_resource type="Animation" id="Animation_ib64v"]
+resource_name = "textani"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uhyes"]
+_data = {
+"textani": SubResource("Animation_ib64v")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Page" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(577, 321)
+rotation = -1.5708
+scale = Vector2(1.4863, 1.85144)
+texture = ExtResource("1_6quti")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchors_preset = -1
+anchor_top = 3.375
+anchor_bottom = 3.375
+offset_left = 82.0
+offset_top = 224.0
+offset_right = 663.0
+offset_bottom = 364.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "hello glheoo"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_uhyes")
+}
