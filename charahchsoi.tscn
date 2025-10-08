@@ -15,5 +15,5 @@ position = Vector2(159, 80)
 shape = SubResource("CircleShape2D_cmiqs")
 
 [node name="Icon" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(397, 193)
+position = Vector2(156, 94)
 texture = ExtResource("2_eakro")
