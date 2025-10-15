@@ -1,24 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://b1368e81kivay"]
+[gd_scene load_steps=3 format=3 uid="uid://b1368e81kivay"]
 
 [ext_resource type="Script" path="res://typewriter.gd" id="1_yhmmr"]
+[ext_resource type="Texture2D" uid="uid://ui6tvlilfqgx" path="res://icon.svg" id="2_ansad"]
 
-[node name="Control" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 66.0
-offset_top = 53.0
-offset_right = 66.0
-offset_bottom = 53.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Control" type="Node"]
 script = ExtResource("1_yhmmr")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-layout_mode = 0
 offset_right = 888.0
 offset_bottom = 391.0
 text = "hellooo gelo gelogelgelelge"
 visible_characters = 0
 visible_ratio = 0.0
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(992, 509)
+texture = ExtResource("2_ansad")
