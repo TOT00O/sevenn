@@ -7,8 +7,10 @@
 script = ExtResource("1_yhmmr")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_right = 888.0
-offset_bottom = 391.0
+offset_left = 62.0
+offset_top = 42.0
+offset_right = 950.0
+offset_bottom = 433.0
 text = "hellooo gelo gelogelgelelge"
 visible_characters = 0
 visible_ratio = 0.0
