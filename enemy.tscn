@@ -6,7 +6,7 @@
 
 [sub_resource type="Animation" id="Animation_nb8b6"]
 resource_name = "jellyouch"
-length = 3.0
+length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -14,7 +14,7 @@ tracks/0/path = NodePath("../AnimationPlayer/Sprite2D2:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 1.2, 2.2),
+"times": PackedFloat32Array(0, 0.4, 1, 1.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3]
@@ -49,3 +49,4 @@ texture = ExtResource("2_bu3bk")
 [node name="Sprite2D2" type="Sprite2D" parent="AnimationPlayer"]
 texture = ExtResource("3_r6kp4")
 hframes = 4
+frame = 3
