@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d18mx4a2ojeox"
-path="res://.godot/imported/Grass.png-dd5cb87a98b967a0aae631f5db6acd40.ctex"
+uid="uid://c05yp77q66i0a"
+path="res://.godot/imported/Solaria Demo Tiles.png-753a2f005f801246c796f01f22523ed9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Grass.png"
-dest_files=["res://.godot/imported/Grass.png-dd5cb87a98b967a0aae631f5db6acd40.ctex"]
+source_file="res://assets/Solaria Demo Tiles.png"
+dest_files=["res://.godot/imported/Solaria Demo Tiles.png-753a2f005f801246c796f01f22523ed9.ctex"]
 
 [params]
 
