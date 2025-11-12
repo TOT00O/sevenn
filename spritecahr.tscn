@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://doubsqe3lryb4"]
+[gd_scene load_steps=57 format=3 uid="uid://b67c184owy1c"]
 
 [ext_resource type="Script" path="res://spritecahr.gd" id="1_8pbxg"]
 [ext_resource type="Texture2D" uid="uid://dbrr4agelt4xa" path="res://assets/Hana Caraka - Base Character [sample]/idle.png" id="1_yatae"]
