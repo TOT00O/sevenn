@@ -1169,6 +1169,7 @@ terrain_set_0/terrain_1/color = Color(0.333333, 0.298039, 1, 1)
 sources/0 = SubResource("TileSetAtlasSource_ice0h")
 
 [node name="TileMap" type="TileMap"]
+texture_filter = 1
 tile_set = SubResource("TileSet_v547j")
 collision_animatable = true
 format = 2
