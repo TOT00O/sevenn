@@ -1,10 +1,9 @@
-
 extends CharacterBody2D
 
-var max_speed = 300
+var max_speed = 60
 var lala = 20 
 
-@onready var animated_sprite = $AnimatedSprite2D  # Fixed: Added $ to get node
+@onready var animated_sprite = $AnimatedSprite2D
 
 @export var inv: Inv
 
@@ -22,41 +21,50 @@ func _physics_process(delta):
 func update_animation(direction: Vector2):
 	# If moving, update last_direction and play walk animation
 	if direction.length() > 0:
-		last_direction = direction
+		# Store a normalized direction (prioritizing horizontal over vertical)
+		last_direction = get_primary_direction(direction)
 		play_walk_animation(direction)
 	else:
 		# If not moving, play idle animation based on last direction
 		play_idle_animation(last_direction)
 
-func play_walk_animation(direction: Vector2):
-	# Determine which walk animation to play based on direction
+func get_primary_direction(direction: Vector2) -> Vector2:
+	# Convert diagonal movement to primary directions
 	if abs(direction.x) > abs(direction.y):
-		# Moving primarily horizontally
-		if direction.x > 0:
+		# Prioritize horizontal
+		return Vector2(sign(direction.x), 0)
+	else:
+		# Prioritize vertical
+		return Vector2(0, sign(direction.y))
+
+func play_walk_animation(direction: Vector2):
+	# Determine which walk animation to play based on primary direction
+	var primary_direction = get_primary_direction(direction)
+	
+	if primary_direction.x != 0:
+		# Moving horizontally
+		if primary_direction.x > 0:
 			animated_sprite.play("walk_right")
 		else:
 			animated_sprite.play("walk_left")
 	else:
-		# Moving primarily vertically
-		if direction.y > 0:
+		# Moving vertically
+		if primary_direction.y > 0:
 			animated_sprite.play("walk_down")
 		else:
 			animated_sprite.play("walk_up")
 
 func play_idle_animation(direction: Vector2):
 	# Determine which idle animation to play based on last direction
-	if abs(direction.x) > abs(direction.y):
-		# Facing primarily horizontally
+	if direction.x != 0:
+		# Facing horizontally
 		if direction.x > 0:
 			animated_sprite.play("idle_right")
 		else:
 			animated_sprite.play("idle_left")
 	else:
-		# Facing primarily vertically
+		# Facing vertically
 		if direction.y > 0:
 			animated_sprite.play("idle_down")
 		else:
 			animated_sprite.play("idle_up")
-
-	 
-
