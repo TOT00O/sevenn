@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://blir37q4470ui"]
 
-[ext_resource type="PackedScene" uid="uid://doubsqe3lryb4" path="res://spritecahr.tscn" id="2_mrxoy"]
+[ext_resource type="PackedScene" uid="uid://b67c184owy1c" path="res://spritecahr.tscn" id="2_mrxoy"]
 [ext_resource type="PackedScene" uid="uid://djdjbpue3dskv" path="res://tile_map.tscn" id="2_yhtvw"]
 
 [node name="game" type="Node2D"]
