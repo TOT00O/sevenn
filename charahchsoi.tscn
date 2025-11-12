@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://daa46o0f4baho"]
+[gd_scene load_steps=5 format=3 uid="uid://daa46o0f4baho"]
 
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_1seny"]
 [ext_resource type="Texture2D" uid="uid://ui6tvlilfqgx" path="res://icon.svg" id="2_eakro"]
+[ext_resource type="Resource" uid="uid://5uuhjeni5hvt" path="res://inventory/playerinv.tres" id="2_pmixw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cmiqs"]
 radius = 76.0
@@ -9,6 +10,7 @@ radius = 76.0
 [node name="Node2D" type="CharacterBody2D"]
 position = Vector2(334, 265)
 script = ExtResource("1_1seny")
+inv = ExtResource("2_pmixw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, 4)

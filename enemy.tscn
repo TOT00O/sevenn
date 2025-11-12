@@ -49,4 +49,3 @@ texture = ExtResource("2_bu3bk")
 [node name="Sprite2D2" type="Sprite2D" parent="AnimationPlayer"]
 texture = ExtResource("3_r6kp4")
 hframes = 4
-frame = 3
