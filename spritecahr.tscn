@@ -401,10 +401,10 @@ animation = &"idle_right"
 shape = SubResource("CircleShape2D_3goc0")
 
 [node name="Inv_UI" parent="." instance=ExtResource("6_2d0jo")]
-offset_left = 320.0
-offset_top = -63.0
-offset_right = 320.0
-offset_bottom = -63.0
+offset_left = -25.0
+offset_top = -65.0
+offset_right = 471.0
+offset_bottom = 424.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)

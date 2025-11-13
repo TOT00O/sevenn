@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdd56rwnt8ag7"]
+
+[ext_resource type="Texture2D" uid="uid://djq8pyoqg3el1" path="res://assets/invbg.png" id="1_faeew"]
+[ext_resource type="PackedScene" uid="uid://clrfqhqg6b23o" path="res://inventory/inv_ui_slot.tscn" id="2_iwacg"]
+
+[node name="charviewUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -534.0
+offset_bottom = -160.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+custom_minimum_size = Vector2(0, 488)
+layout_mode = 0
+offset_right = 618.0
+offset_bottom = 488.0
+texture = ExtResource("1_faeew")
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="inv_UI_slot" parent="NinePatchRect" instance=ExtResource("2_iwacg")]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 46.0
+offset_right = 167.0
+offset_bottom = 170.0
+scale = Vector2(2, 2)
+
+[node name="inv_UI_slot8" parent="NinePatchRect" instance=ExtResource("2_iwacg")]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 311.0
+offset_right = 181.0
+offset_bottom = 435.0
+scale = Vector2(1, 1)
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 317.0
+offset_top = 54.0
+offset_right = 620.0
+offset_bottom = 473.0
+columns = 2
+
+[node name="inv_UI_slot2" parent="NinePatchRect/GridContainer" instance=ExtResource("2_iwacg")]
+layout_mode = 2
+
+[node name="inv_UI_slot3" parent="NinePatchRect/GridContainer" instance=ExtResource("2_iwacg")]
+layout_mode = 2
+
+[node name="inv_UI_slot4" parent="NinePatchRect/GridContainer" instance=ExtResource("2_iwacg")]
+layout_mode = 2
+
+[node name="inv_UI_slot5" parent="NinePatchRect/GridContainer" instance=ExtResource("2_iwacg")]
+layout_mode = 2
+
+[node name="inv_UI_slot6" parent="NinePatchRect/GridContainer" instance=ExtResource("2_iwacg")]
+layout_mode = 2
+
+[node name="inv_UI_slot7" parent="NinePatchRect/GridContainer" instance=ExtResource("2_iwacg")]
+layout_mode = 2
