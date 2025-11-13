@@ -7,7 +7,7 @@ func _ready():
 
 func _process(delta):
 	if $RichTextLabel.visible_ratio < 1:
-		$RichTextLabel.visible_ratio += 0.5 * delta
+		$RichTextLabel.visible_ratio += 0.05 * delta
 	elif not finished:
 		finished = true
 		start_scene_transition()
