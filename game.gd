@@ -2,6 +2,7 @@ extends Node2D  # Attach this to the root node of your game scene
 
 func _ready():
 	fade_from_black()
+	$backgroundmusic.play()
 
 func fade_from_black():
 	# Create a black ColorRect that covers the entire screen
