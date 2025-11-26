@@ -68,3 +68,7 @@ func play_idle_animation(direction: Vector2):
 			animated_sprite.play("idle_down")
 		else:
 			animated_sprite.play("idle_up")
+			
+			
+func collect(item):
+	inv.insert(item)

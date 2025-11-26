@@ -1,5 +1,5 @@
 extends Control
-@onready var optionsMenu = preload("res://game.gd")
+@onready var optionsMenu = preload("res://scripts/game.gd")
 func _ready():
 	$AnimationPlayer.play("RESET")
 
@@ -31,7 +31,7 @@ func _process(delta):
 
 func _on_options_pressed():
 	resume()
-	get_tree().change_scene_to_file("res://options_menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/options_menu.tscn")
 
 
 func _on_restart_pressed():
