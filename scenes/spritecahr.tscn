@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://b67c184owy1c"]
+[gd_scene load_steps=58 format=3 uid="uid://b67c184owy1c"]
 
 [ext_resource type="Script" path="res://scripts/spritecahr.gd" id="1_8pbxg"]
 [ext_resource type="Texture2D" uid="uid://dbrr4agelt4xa" path="res://assets/Hana Caraka - Base Character [sample]/idle.png" id="1_yatae"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://5wqjwe81bxfq" path="res://assets/Hana Caraka - Base Character [sample]/walk.png" id="3_7mgo3"]
 [ext_resource type="Texture2D" uid="uid://xt6bl65nmanr" path="res://assets/Hana Caraka - Base Character [sample]/walk_left.png" id="4_qvbdx"]
 [ext_resource type="PackedScene" uid="uid://cxe5il5j0vhjv" path="res://inventory/inv_ui.tscn" id="6_2d0jo"]
+[ext_resource type="PackedScene" uid="uid://cpdjr5wlwrgpa" path="res://scenes/weapon.tscn" id="7_rxx2k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_si5qk"]
 atlas = ExtResource("1_yatae")
@@ -409,3 +410,7 @@ offset_bottom = 423.0
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
 position_smoothing_enabled = true
+
+[node name="weapon" parent="." instance=ExtResource("7_rxx2k")]
+position = Vector2(10.2542, -0.605987)
+scale = Vector2(0.452834, 0.452834)
