@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://c3enut4x0jyld"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_vqwr4"]
+[ext_resource type="PackedScene" uid="uid://bjf2vv8jwrx6n" path="res://spritecahr.tscn" id="2_mrxoy"]
+[ext_resource type="PackedScene" uid="uid://e0vvn7l5scob" path="res://tile_map.tscn" id="2_yhtvw"]
+[ext_resource type="AudioStream" uid="uid://btpt8s3d6ynru" path="res://assets/music/unpacking-loop-ycle-138250.mp3" id="4_j7lbm"]
+[ext_resource type="PackedScene" uid="uid://bk7xp0c2hycf6" path="res://pause_menu.tscn" id="5_1m3pm"]
+
+[node name="game" type="Node2D"]
+script = ExtResource("1_vqwr4")
+
+[node name="TileMap" parent="." instance=ExtResource("2_yhtvw")]
+
+[node name="player" parent="." instance=ExtResource("2_mrxoy")]
+z_index = 2
+position = Vector2(183, 280)
+
+[node name="backgroundmusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_j7lbm")
+autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("5_1m3pm")]
