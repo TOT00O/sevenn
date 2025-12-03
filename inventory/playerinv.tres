@@ -4,4 +4,4 @@
 
 [resource]
 script = ExtResource("2_1tc62")
-items = Array[Resource("res://inventory/inventory_item.gd")]([])
+slots = Array[Resource("res://inventory/inv_slot.gd")]([])
