@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b1368e81kivay"]
 
 [ext_resource type="Script" path="res://typewriter.gd" id="1_yhmmr"]
-[ext_resource type="Texture2D" uid="uid://ui6tvlilfqgx" path="res://icon.svg" id="2_ansad"]
+[ext_resource type="Texture2D" uid="uid://drhy44dnbpkgf" path="res://assets/intro1.png" id="2_arcrl"]
 
 [node name="Control" type="Node"]
 script = ExtResource("1_yhmmr")
@@ -21,4 +21,5 @@ visible_ratio = 0.0
 
 [node name="Icon" type="Sprite2D" parent="."]
 position = Vector2(992, 509)
-texture = ExtResource("2_ansad")
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_arcrl")

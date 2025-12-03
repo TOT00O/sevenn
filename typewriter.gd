@@ -18,7 +18,7 @@ func start_scene_transition():
 	fade_to_black()
 	# Wait for fade to complete, then switch scene
 	await get_tree().create_timer(1.0).timeout  # Match this to your fade duration
-	get_tree().change_scene_to_file("res://game.tscn")
+	get_tree().change_scene_to_file("res://scenes/game.tscn")
 
 func fade_to_black():
 	# Create a ColorRect that covers the entire screen
