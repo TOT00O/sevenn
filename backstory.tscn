@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://878lhwwjw0f"]
+
+[ext_resource type="Script" path="res://typewriter.gd" id="1_yhmmr"]
+[ext_resource type="Texture2D" uid="uid://ui6tvlilfqgx" path="res://icon.svg" id="2_ansad"]
+
+[node name="Control" type="Node"]
+script = ExtResource("1_yhmmr")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 62.0
+offset_top = 42.0
+offset_right = 950.0
+offset_bottom = 433.0
+text = "Once upon a time there was an ordinary girl, on her way home from school as any other day. However, that day she decided she wanted to take a detour to the local second hand book store, The dusty shelf, to find herself one or a few new books to read. 
+
+The bell jingled as she opened the door to the old shop, she stepped into the familiar environment, all was as it was last time she was there. Tall bookshelves scattered around in an orderly fashion, every shelf filled with both old looking books and a few newer looking books.
+
+She walked through the old store, browsing the shelves as she went."
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(992, 509)
+texture = ExtResource("2_ansad")
