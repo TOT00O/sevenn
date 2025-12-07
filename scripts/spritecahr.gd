@@ -3,6 +3,10 @@ extends CharacterBody2D
 var max_speed = 60
 var lala = 20 
 
+@export var max_health = 5
+@onready var current_helth: int = max_health
+
+
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var animation_player = $AnimationPlayer
 @onready var weapon_node = $Weposn  # <-- Weapon node (Node2D that contains Area2D)
@@ -39,7 +43,7 @@ func _physics_process(delta):
 		update_animation(direction)
 
 
-# ---------------- MOVEMENT ANIMATION LOGIC ---------------- #
+# ---------------- wlaking ---------------- #
 
 func update_animation(direction: Vector2):
 	if direction.length() > 0:
