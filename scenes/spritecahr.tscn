@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://b67c184owy1c"]
+[gd_scene load_steps=64 format=3 uid="uid://b67c184owy1c"]
 
 [ext_resource type="Script" path="res://scripts/spritecahr.gd" id="1_8pbxg"]
 [ext_resource type="Texture2D" uid="uid://dbrr4agelt4xa" path="res://assets/Hana Caraka - Base Character [sample]/idle.png" id="1_yatae"]
@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://5wqjwe81bxfq" path="res://assets/Hana Caraka - Base Character [sample]/walk.png" id="3_7mgo3"]
 [ext_resource type="Texture2D" uid="uid://xt6bl65nmanr" path="res://assets/Hana Caraka - Base Character [sample]/walk_left.png" id="4_qvbdx"]
 [ext_resource type="PackedScene" uid="uid://cxe5il5j0vhjv" path="res://inventory/inv_ui.tscn" id="6_2d0jo"]
-[ext_resource type="PackedScene" uid="uid://cpdjr5wlwrgpa" path="res://scenes/weapon.tscn" id="7_rxx2k"]
+[ext_resource type="PackedScene" uid="uid://dvodvvjpndjmk" path="res://scenes/axe.tscn" id="7_ncoki"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_si5qk"]
 atlas = ExtResource("1_yatae")
@@ -390,6 +390,214 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_3goc0"]
 radius = 9.05539
 
+[sub_resource type="Animation" id="Animation_4iqtc"]
+resource_name = "swing_up"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Weposn/axe:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.13446, -1.19904]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Weposn/axe:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4.54747e-13, -8)]
+}
+
+[sub_resource type="Animation" id="Animation_7q7qx"]
+resource_name = "swing_down"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Weposn/axe:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-4.18879, -2.16072]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Weposn/axe:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 7)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_3npr3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Weposn/axe:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-3.67915]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Weposn/axe:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 7)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_2abml"]
+resource_name = "swing_left"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Weposn/axe:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-8, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Weposn/axe:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.481711, -2.63545]
+}
+
+[sub_resource type="Animation" id="Animation_wyw3j"]
+resource_name = "swing_right"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Weposn/axe:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(8, 3.27826e-07)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Weposn/axe:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-5.86605, -3.71232]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_26h2a"]
+_data = {
+"RESET": SubResource("Animation_3npr3"),
+"swing_down": SubResource("Animation_7q7qx"),
+"swing_left": SubResource("Animation_2abml"),
+"swing_right": SubResource("Animation_wyw3j"),
+"swing_up": SubResource("Animation_4iqtc")
+}
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_8pbxg")
 
@@ -411,6 +619,14 @@ offset_bottom = 423.0
 zoom = Vector2(4, 4)
 position_smoothing_enabled = true
 
-[node name="weapon" parent="." instance=ExtResource("7_rxx2k")]
-position = Vector2(10.2542, -0.605987)
-scale = Vector2(0.452834, 0.452834)
+[node name="Weposn" type="Node2D" parent="."]
+
+[node name="axe" parent="Weposn" instance=ExtResource("7_ncoki")]
+position = Vector2(0, 7)
+rotation = -3.67915
+scale = Vector2(0.6, 0.6)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_26h2a")
+}

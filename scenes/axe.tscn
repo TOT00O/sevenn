@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvodvvjpndjmk"]
+
+[ext_resource type="Texture2D" uid="uid://casx4nmlcr1lv" path="res://assets/weapon.png" id="1_a7nee"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kwfkc"]
+radius = 8.0
+height = 22.0
+
+[node name="axe" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -12)
+texture = ExtResource("1_a7nee")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -20)
+rotation = 1.57368
+scale = Vector2(0.885636, 1.21774)
+shape = SubResource("CapsuleShape2D_kwfkc")
