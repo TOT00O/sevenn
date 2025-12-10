@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c58542kllthll"]
+
+[ext_resource type="Texture2D" uid="uid://casx4nmlcr1lv" path="res://assets/weapon.png" id="1_rldbq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xufxu"]
+radius = 23.0868
+
+[node name="weaponcollect" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_rldbq")
+
+[node name="interactable_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable_area"]
+shape = SubResource("CircleShape2D_xufxu")
