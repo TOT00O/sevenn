@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://b67c184owy1c"]
+[gd_scene load_steps=65 format=3 uid="uid://b67c184owy1c"]
 
 [ext_resource type="Script" path="res://scripts/spritecahr.gd" id="1_8pbxg"]
 [ext_resource type="Texture2D" uid="uid://dbrr4agelt4xa" path="res://assets/Hana Caraka - Base Character [sample]/idle.png" id="1_yatae"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://xt6bl65nmanr" path="res://assets/Hana Caraka - Base Character [sample]/walk_left.png" id="4_qvbdx"]
 [ext_resource type="PackedScene" uid="uid://cxe5il5j0vhjv" path="res://inventory/inv_ui.tscn" id="6_2d0jo"]
 [ext_resource type="PackedScene" uid="uid://dvodvvjpndjmk" path="res://scenes/axe.tscn" id="7_ncoki"]
+[ext_resource type="Texture2D" uid="uid://c32pvev4q06aw" path="res://assets/Hearts/PNG/basic/heart.png" id="8_1qqe3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_si5qk"]
 atlas = ExtResource("1_yatae")
@@ -630,3 +631,36 @@ scale = Vector2(0.6, 0.6)
 libraries = {
 "": SubResource("AnimationLibrary_26h2a")
 }
+
+[node name="health" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="health"]
+offset_top = 8.0
+offset_right = 101.0
+offset_bottom = 48.0
+scale = Vector2(2.8, 1.45833)
+
+[node name="heart_1" type="TextureRect" parent="health/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("8_1qqe3")
+
+[node name="heart_2" type="TextureRect" parent="health/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("8_1qqe3")
+
+[node name="heart_3" type="TextureRect" parent="health/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("8_1qqe3")
+
+[node name="heart_4" type="TextureRect" parent="health/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("8_1qqe3")
+
+[node name="heart_5" type="TextureRect" parent="health/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("8_1qqe3")
