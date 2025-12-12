@@ -1,5 +1,6 @@
-[gd_scene load_steps=19 format=3 uid="uid://jiv7sad6klbu"]
+[gd_scene load_steps=21 format=3 uid="uid://jiv7sad6klbu"]
 
+[ext_resource type="Script" path="res://scenes/betterenemy.gd" id="1_7dcqf"]
 [ext_resource type="Texture2D" uid="uid://dvebc6i21qtlt" path="res://assets/slime.png" id="1_rjjxg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3gwyh"]
@@ -128,14 +129,18 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_kduva"]
 radius = 44.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_snicc"]
+radius = 5.0
+
 [node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_7dcqf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_jkvmh")
-animation = &"walk"
-frame = 2
-frame_progress = 0.00139646
+animation = &"idle"
+frame_progress = 0.165196
+offset = Vector2(0, -6)
 
 [node name="detection_area" type="Area2D" parent="."]
 collision_layer = 2
@@ -143,3 +148,10 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
 shape = SubResource("CircleShape2D_kduva")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_snicc")
+
+[connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]
