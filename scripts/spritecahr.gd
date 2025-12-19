@@ -119,3 +119,11 @@ func collect(item):
 
 
 # ------------------ Helthbar ------------------ #
+
+
+func _on_player_hitbox_body_entered(body):
+	pass # Replace with function body.
+
+
+func _on_player_hitbox_body_exited(body):
+	pass # Replace with function body.

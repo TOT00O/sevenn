@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://jiv7sad6klbu"]
+[gd_scene load_steps=20 format=3 uid="uid://jiv7sad6klbu"]
 
 [ext_resource type="Texture2D" uid="uid://dvebc6i21qtlt" path="res://assets/slime.png" id="1_rjjxg"]
 
@@ -128,6 +128,8 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_kduva"]
 radius = 44.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_jq6rj"]
+
 [node name="Enemy" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -143,3 +145,9 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
 shape = SubResource("CircleShape2D_kduva")
+
+[node name="enemy_hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_hitbox"]
+position = Vector2(0, -4)
+shape = SubResource("CircleShape2D_jq6rj")
