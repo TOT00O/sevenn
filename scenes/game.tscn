@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://blir37q4470ui"]
+[gd_scene load_steps=6 format=3 uid="uid://blir37q4470ui"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_vqwr4"]
 [ext_resource type="PackedScene" uid="uid://b67c184owy1c" path="res://scenes/spritecahr.tscn" id="2_mrxoy"]
 [ext_resource type="PackedScene" uid="uid://djdjbpue3dskv" path="res://scenes/tile_map.tscn" id="2_yhtvw"]
 [ext_resource type="AudioStream" uid="uid://btpt8s3d6ynru" path="res://assets/music/unpacking-loop-ycle-138250.mp3" id="4_j7lbm"]
 [ext_resource type="PackedScene" uid="uid://dwvvlwm4onfb8" path="res://scenes/pause_menu.tscn" id="5_1m3pm"]
-[ext_resource type="PackedScene" uid="uid://jiv7sad6klbu" path="res://scenes/betterenemy.tscn" id="6_ocuby"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_vqwr4")
@@ -23,6 +22,3 @@ autoplay = true
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("5_1m3pm")]
-
-[node name="Enemy" parent="." instance=ExtResource("6_ocuby")]
-position = Vector2(272, 276)
