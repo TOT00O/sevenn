@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://b67c184owy1c"]
+[gd_scene load_steps=65 format=3 uid="uid://b67c184owy1c"]
 
 [ext_resource type="Script" path="res://scripts/spritecahr.gd" id="1_8pbxg"]
 [ext_resource type="Texture2D" uid="uid://dbrr4agelt4xa" path="res://assets/Hana Caraka - Base Character [sample]/idle.png" id="1_yatae"]
@@ -599,10 +599,8 @@ _data = {
 "swing_up": SubResource("Animation_4iqtc")
 }
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_q07mg"]
-radius = 9.0
-
 [node name="CharacterBody2D" type="CharacterBody2D"]
+collision_layer = 3
 script = ExtResource("1_8pbxg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -614,6 +612,7 @@ animation = &"idle_right"
 shape = SubResource("CircleShape2D_3goc0")
 
 [node name="Inv_UI" parent="." instance=ExtResource("6_2d0jo")]
+visible = false
 offset_left = -25.0
 offset_top = -66.0
 offset_right = 471.0
@@ -667,8 +666,3 @@ texture = ExtResource("8_1qqe3")
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("8_1qqe3")
-
-[node name="player_hitbox" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player_hitbox"]
-shape = SubResource("CircleShape2D_q07mg")
