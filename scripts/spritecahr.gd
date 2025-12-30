@@ -4,8 +4,6 @@ var max_speed = 60
 var lala = 20 
 
 @export var max_health = 5
-@onready var current_helth: int = max_health
-
 
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var animation_player = $AnimationPlayer
@@ -121,9 +119,13 @@ func collect(item):
 # ------------------ Helthbar ------------------ #
 
 
+<<<<<<< Updated upstream
 func _on_player_hitbox_body_entered(body):
 	pass # Replace with function body.
 
 
 func _on_player_hitbox_body_exited(body):
 	pass # Replace with function body.
+=======
+ 
+>>>>>>> Stashed changes
