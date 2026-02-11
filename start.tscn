@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnx4bmybf2gnk"]
+
+[sub_resource type="TileSet" id="TileSet_muulv"]
+
+[node name="start" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+texture_filter = 1
+tile_set = SubResource("TileSet_muulv")
+format = 2
