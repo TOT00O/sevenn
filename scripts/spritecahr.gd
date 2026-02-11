@@ -1,5 +1,10 @@
 extends CharacterBody2D
 
+var enemy_inattack_range = false
+var enemy_attack_cooldown = true
+var player_alive = true
+
+
 var max_speed = 60
 var lala = 20 
 
@@ -27,9 +32,16 @@ func _ready():
 
 
 func _physics_process(delta):
+	enemy_attack()
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	velocity = direction * max_speed
-
+	
+	if max_health <= 0:
+		player_alive = false # add game over screen
+		max_health = 0
+		print("player has been killed")
+		self.queue_free()
+	
 	# If attacking, optionally stop movement (or allow free movement)
 	if not attacking:
 		move_and_slide()
@@ -127,3 +139,31 @@ func set_hearts(num_of_hearts: int):
 	var heart_texture = $health/heart.texture
 	var heart_width = heart_texture.get_width()
 	$health/heart.custom_minimum_size.x = heart_width * num_of_hearts
+
+
+# ------------------ attakcss GRAAAAHHH ------------------ #
+
+func player():
+	pass
+	
+
+func _on_player_hitbox_body_entered(body):
+	if body.has_method("betterenemy"):
+		enemy_inattack_range= true
+
+
+func _on_player_hitbox_body_exited(body):
+	if body.has_method("betterenemy"):
+		enemy_inattack_range = false
+		
+
+func enemy_attack():
+	if enemy_inattack_range and enemy_attack_cooldown == true:
+		max_health = max_health - 1 
+		enemy_attack_cooldown = false
+		$attack_cooldown.start() 
+		print(max_health)
+
+
+func _on_attack_cooldown_timeout():
+	enemy_attack_cooldown = true

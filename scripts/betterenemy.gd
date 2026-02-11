@@ -27,3 +27,14 @@ func _on_detection_area_body_entered(body):
 func _on_detection_area_body_exited(body):
 	player = null
 	player_chase = false
+
+func betterenemy():
+	pass
+
+
+func _on_enemy_hitbox_body_entered(body):
+	pass # Replace with function body.
+
+
+func _on_enemy_hitbox_body_exited(body):
+	pass # Replace with function body.
