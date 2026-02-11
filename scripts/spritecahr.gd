@@ -9,6 +9,7 @@ var max_speed = 60
 var lala = 20 
 
 @export var max_health : int = 5
+var current_health : int
 
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var animation_player = $AnimationPlayer
@@ -20,15 +21,12 @@ var last_direction = Vector2.DOWN
 var attacking = false   # Track if currently attacking
 
 func _ready():
-	# Hide weapon initially
 	weapon_node.visible = false
-	
-	# Connect the signal properly
 	animation_player.animation_finished.connect(_on_animation_finished)
-	
-	#set healtf
+
+	current_health = max_health
 	$health/heart.scale = Vector2(2,2)
-	set_hearts(max_health)
+	set_hearts(current_health)
 
 
 func _physics_process(_delta):
@@ -36,9 +34,9 @@ func _physics_process(_delta):
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	velocity = direction * max_speed
 	
-	if max_health <= 0:
+	if current_health <= 0:
 		player_alive = false # add game over screen
-		max_health = 0
+		current_health = 0
 		print("player has been killed")
 		self.queue_free()
 	
@@ -140,17 +138,24 @@ func _on_player_hitbox_body_exited(body):
 		
 
 func enemy_attack():
-	if enemy_inattack_range and enemy_attack_cooldown == true:
-		max_health = max_health - 1 
+	if enemy_inattack_range and enemy_attack_cooldown:
+		current_health -= 1
+		current_health = clamp(current_health, 0, max_health)
+		
+		set_hearts(current_health)   
+		
 		enemy_attack_cooldown = false
-		$attack_cooldown.start() 
-		print(max_health)
+		$attack_cooldown.start()
+		
+		print(current_health)
 
 
 func _on_attack_cooldown_timeout():
 	enemy_attack_cooldown = true
 
-
+func _on_axe_body_entered(body):
+	if attacking and body.has_method("take_damage"):
+		body.take_damage(20)
 # ------------------ Inventory ------------------ #
 
 func collect(item):
@@ -160,10 +165,14 @@ func collect(item):
 # ------------------ Helthbar ------------------ #
 
 
-func set_hearts(num_of_hearts: int):
+func set_hearts(health_amount: int):
 	var heart_texture = $health/heart.texture
 	var heart_width = heart_texture.get_width()
-	$health/heart.custom_minimum_size.x = heart_width * num_of_hearts
+	$health/heart.custom_minimum_size.x = heart_width * health_amount
+
+
+
+
 
 
 
