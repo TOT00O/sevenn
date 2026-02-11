@@ -3,7 +3,7 @@ extends CharacterBody2D
 var max_speed = 60
 var lala = 20 
 
-@export var max_health = 5
+@export var max_health : int = 5
 
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var animation_player = $AnimationPlayer
@@ -20,6 +20,10 @@ func _ready():
 	
 	# Connect the signal properly
 	animation_player.animation_finished.connect(_on_animation_finished)
+	
+	#set healtf
+	$health/heart.scale = Vector2(2,2)
+	set_hearts(max_health)
 
 
 func _physics_process(delta):
@@ -119,4 +123,7 @@ func collect(item):
 # ------------------ Helthbar ------------------ #
 
 
-
+func set_hearts(num_of_hearts: int):
+	var heart_texture = $health/heart.texture
+	var heart_width = heart_texture.get_width()
+	$health/heart.custom_minimum_size.x = heart_width * num_of_hearts

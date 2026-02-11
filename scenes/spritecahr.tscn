@@ -636,33 +636,10 @@ libraries = {
 
 [node name="health" type="CanvasLayer" parent="."]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="health"]
+[node name="heart" type="TextureRect" parent="health"]
+texture_filter = 1
 offset_top = 8.0
-offset_right = 101.0
-offset_bottom = 48.0
-scale = Vector2(2.8, 1.45833)
-
-[node name="heart_1" type="TextureRect" parent="health/HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
+offset_right = 17.0
+offset_bottom = 25.0
 texture = ExtResource("8_1qqe3")
-
-[node name="heart_2" type="TextureRect" parent="health/HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("8_1qqe3")
-
-[node name="heart_3" type="TextureRect" parent="health/HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("8_1qqe3")
-
-[node name="heart_4" type="TextureRect" parent="health/HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("8_1qqe3")
-
-[node name="heart_5" type="TextureRect" parent="health/HBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-texture = ExtResource("8_1qqe3")
+stretch_mode = 1
