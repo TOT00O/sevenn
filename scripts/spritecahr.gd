@@ -31,7 +31,7 @@ func _ready():
 	set_hearts(max_health)
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	enemy_attack()
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	velocity = direction * max_speed
@@ -125,24 +125,6 @@ func _on_animation_finished(anim_name):
 		weapon_node.visible = false
 		attacking = false
 
-
-# ------------------ Inventory ------------------ #
-
-func collect(item):
-	inv.insert(item)
-
-
-# ------------------ Helthbar ------------------ #
-
-
-func set_hearts(num_of_hearts: int):
-	var heart_texture = $health/heart.texture
-	var heart_width = heart_texture.get_width()
-	$health/heart.custom_minimum_size.x = heart_width * num_of_hearts
-
-
-# ------------------ attakcss GRAAAAHHH ------------------ #
-
 func player():
 	pass
 	
@@ -167,3 +149,22 @@ func enemy_attack():
 
 func _on_attack_cooldown_timeout():
 	enemy_attack_cooldown = true
+
+
+# ------------------ Inventory ------------------ #
+
+func collect(item):
+	inv.insert(item)
+
+
+# ------------------ Helthbar ------------------ #
+
+
+func set_hearts(num_of_hearts: int):
+	var heart_texture = $health/heart.texture
+	var heart_width = heart_texture.get_width()
+	$health/heart.custom_minimum_size.x = heart_width * num_of_hearts
+
+
+
+
