@@ -31,7 +31,7 @@ func _process(_delta):
 
 func _on_options_pressed():
 	resume()
-	get_tree().change_scene_to_file("res://scenes/options_menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/options.tscn")
 
 
 func _on_restart_pressed():
