@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bnx4bmybf2gnk"]
+[gd_scene load_steps=7 format=3 uid="uid://bnx4bmybf2gnk"]
 
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_5pydp"]
 [ext_resource type="Texture2D" uid="uid://c05yp77q66i0a" path="res://assets/Solaria Demo Tiles.png" id="1_fp706"]
 [ext_resource type="PackedScene" uid="uid://b67c184owy1c" path="res://scenes/spritecahr.tscn" id="2_l7rpj"]
+[ext_resource type="PackedScene" uid="uid://b5vllwfd4icuf" path="res://scenes/door.tscn" id="3_1y5mm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tekve"]
 texture = ExtResource("1_fp706")
@@ -1130,6 +1132,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_tekve")
 
 [node name="start" type="Node2D"]
+script = ExtResource("1_5pydp")
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -1143,3 +1146,16 @@ layer_1/tile_data = PackedInt32Array(983087, 0, 1, 917551, 0, 1, 852015, 0, 1, 7
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_l7rpj")]
 position = Vector2(192, 270)
+
+[node name="doors" type="Node" parent="."]
+
+[node name="door_1" parent="doors" instance=ExtResource("3_1y5mm")]
+position = Vector2(1131, 279)
+destination_level_tag = "lvl_1"
+destination_door_tag = "2"
+spawn_direction = "left"
+
+[node name="spawn" parent="doors/door_1" index="1"]
+position = Vector2(-22, 0)
+
+[editable path="doors/door_1"]

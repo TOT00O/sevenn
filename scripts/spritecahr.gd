@@ -1,5 +1,9 @@
 extends CharacterBody2D
 
+
+class_name Player
+
+
 var enemy_inattack_range = false
 var enemy_attack_cooldown = true
 var player_alive = true
@@ -27,6 +31,11 @@ func _ready():
 	current_health = max_health
 	$health/heart.scale = Vector2(2,2)
 	set_hearts(current_health)
+	
+	NavigationManger.on_trigger_player_spawn.connect(_on_spawn)
+	
+func _on_spawn(position: Vector2, direction: String):
+	global_position = position
 
 
 func _physics_process(_delta):
