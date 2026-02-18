@@ -37,6 +37,10 @@ func fade_to_black():
 	# Animate fade to black
 	var tween = create_tween()
 	tween.tween_property(fade_rect, \"modulate:a\", 1.0, 1.0)  # Fade to opaque over 1 second
+
+
+func _on_skip_pressed():
+	get_tree().change_scene_to_file(\"res://scenes/game.tscn\")
 "
 
 [node name="Control" type="Node"]
@@ -59,3 +63,12 @@ visible_ratio = 0.0
 position = Vector2(992, 509)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_n3n58")
+
+[node name="skip" type="Button" parent="."]
+offset_left = 1046.0
+offset_top = 569.0
+offset_right = 1086.0
+offset_bottom = 600.0
+text = "skip"
+
+[connection signal="pressed" from="skip" to="." method="_on_skip_pressed"]

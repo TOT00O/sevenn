@@ -39,6 +39,7 @@ func _physics_process(_delta):
 		current_health = 0
 		print("player has been killed")
 		self.queue_free()
+		get_tree().change_scene_to_file("res://scenes/deathscreen.tscn")
 	
 	# If attacking, optionally stop movement (or allow free movement)
 	if not attacking:
