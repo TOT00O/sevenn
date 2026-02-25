@@ -1,6 +1,11 @@
-[gd_scene format=3 uid="uid://dbfu5uadqg4hj"]
+[gd_scene load_steps=2 format=3 uid="uid://dbfu5uadqg4hj"]
+
+[ext_resource type="Script" path="res://lvltimer.gd" id="1_4cw67"]
 
 [node name="lvltimer" type="Timer"]
 wait_time = 60.0
 one_shot = true
 autostart = true
+script = ExtResource("1_4cw67")
+
+[connection signal="timeout" from="." to="." method="_on_timeout"]
