@@ -1,15 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://b5vllwfd4icuf"]
+[gd_scene load_steps=5 format=3 uid="uid://bih2ucbqsqpvt"]
 
-[ext_resource type="Script" path="res://scripts/door.gd" id="1_fxkur"]
+[ext_resource type="Script" path="res://Door.gd" id="1_ej52j"]
+[ext_resource type="Texture2D" uid="uid://blixfhxdpyu0t" path="res://assets/door.png" id="2_w0aho"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_je51m"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4qe1x"]
+size = Vector2(278, 249)
 
-[node name="door" type="Area2D"]
-script = ExtResource("1_fxkur")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2riju"]
+size = Vector2(277, 400)
+
+[node name="Door" type="StaticBody2D"]
+script = ExtResource("1_ej52j")
+
+[node name="Door" type="Sprite2D" parent="."]
+texture = ExtResource("2_w0aho")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_je51m")
+position = Vector2(1, 95.5)
+shape = SubResource("RectangleShape2D_4qe1x")
 
-[node name="spawn" type="Marker2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1.5, 92)
+shape = SubResource("RectangleShape2D_2riju")
