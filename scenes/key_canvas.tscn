@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bg1gmo232xdwb"]
+
+[ext_resource type="Texture2D" uid="uid://jx2uiv7hxjbg" path="res://assets/key.png" id="1_skd4i"]
+[ext_resource type="Script" path="res://scenes/key_canvas.gd" id="1_xaw3m"]
+
+[node name="KeyCanvas" type="CanvasLayer"]
+script = ExtResource("1_xaw3m")
+
+[node name="keyDoor" type="Sprite2D" parent="."]
+position = Vector2(1072, 66)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("1_skd4i")
