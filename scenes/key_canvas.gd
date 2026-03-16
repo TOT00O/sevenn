@@ -16,5 +16,5 @@ func hide_key():
 		$keyDoor.visible = false
 	
 func delete_canvas():
-	if &"Door" in Global.opened_doors:
+	if "Door" in Global.opened_doors:
 		self.queue_free()
