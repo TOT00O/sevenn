@@ -1156,7 +1156,7 @@ position = Vector2(662, 275)
 [node name="doors" type="Node" parent="."]
 
 [node name="keyDoor" parent="." instance=ExtResource("5_6jh25")]
-position = Vector2(412, 273)
+position = Vector2(702, 280)
 
 [node name="Door2" parent="." instance=ExtResource("3_1y5mm")]
 position = Vector2(583, 343)

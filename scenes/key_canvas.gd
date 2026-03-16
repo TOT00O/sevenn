@@ -1,6 +1,10 @@
 extends CanvasLayer
 
-
+func _ready():
+	show_key()
+	hide_key()
+	delete_canvas()
+	
 # Called when the node enters the scene tree for the first time.
 func show_key():
 	if "keyDoor" in Global.key_found and not "Door" in Global.opened_doors:
@@ -12,5 +16,5 @@ func hide_key():
 		$keyDoor.visible = false
 	
 func delete_canvas():
-	if "Door" in Global.opened_doors:
+	if &"Door" in Global.opened_doors:
 		self.queue_free()
