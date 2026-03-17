@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cn54rxjvtdbjh"]
+[gd_scene load_steps=8 format=3 uid="uid://cn54rxjvtdbjh"]
 
-[ext_resource type="Script" path="res://scripts/level.gd" id="1_aj22l"]
+[ext_resource type="Script" path="res://scenes/fightinglvl.gd" id="1_of14y"]
 [ext_resource type="Texture2D" uid="uid://c05yp77q66i0a" path="res://assets/Solaria Demo Tiles.png" id="2_rcq71"]
 [ext_resource type="PackedScene" uid="uid://b67c184owy1c" path="res://scenes/spritecahr.tscn" id="4_it23s"]
+[ext_resource type="PackedScene" uid="uid://c4u5wxis2311r" path="res://scenes/boss.tscn" id="5_68w1y"]
+[ext_resource type="PackedScene" uid="uid://jiv7sad6klbu" path="res://scenes/betterenemy.tscn" id="5_nylt1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tekve"]
 texture = ExtResource("2_rcq71")
@@ -1130,8 +1132,8 @@ texture = ExtResource("2_rcq71")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_tekve")
 
-[node name="start" type="Node2D"]
-script = ExtResource("1_aj22l")
+[node name="fightinglvl" type="Node2D"]
+script = ExtResource("1_of14y")
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -1146,3 +1148,18 @@ layer_1/tile_data = PackedInt32Array(1048576, 65536, 0, 1048577, 65536, 0, 10485
 [node name="CharacterBody2D" parent="." instance=ExtResource("4_it23s")]
 visibility_layer = 3
 position = Vector2(25, 266)
+
+[node name="Enemy" parent="." instance=ExtResource("5_nylt1")]
+position = Vector2(748, 197)
+
+[node name="Enemy2" parent="." instance=ExtResource("5_nylt1")]
+position = Vector2(616, 478)
+
+[node name="Enemy3" parent="." instance=ExtResource("5_nylt1")]
+position = Vector2(769, 333)
+
+[node name="Enemy4" parent="." instance=ExtResource("5_nylt1")]
+position = Vector2(547, 253)
+
+[node name="boss" parent="." instance=ExtResource("5_68w1y")]
+position = Vector2(982, 332)

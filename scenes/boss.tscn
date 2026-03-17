@@ -1,69 +1,69 @@
-[gd_scene load_steps=25 format=3 uid="uid://jiv7sad6klbu"]
+[gd_scene load_steps=25 format=3 uid="uid://c4u5wxis2311r"]
 
-[ext_resource type="Script" path="res://scripts/betterenemy.gd" id="1_74jgi"]
-[ext_resource type="Texture2D" uid="uid://dvebc6i21qtlt" path="res://assets/slime.png" id="1_rjjxg"]
-[ext_resource type="Script" path="res://scenes/HealthBar.gd" id="3_8qm0g"]
-[ext_resource type="Texture2D" uid="uid://c0e2kq7w6uev8" path="res://assets/healthbarUnder.png" id="3_40kks"]
-[ext_resource type="Texture2D" uid="uid://6pbjtrnwxctw" path="res://assets/healthbarProgress.png" id="4_u0i0y"]
+[ext_resource type="Script" path="res://scripts/betterenemy.gd" id="1_xfqd1"]
+[ext_resource type="Texture2D" uid="uid://dvebc6i21qtlt" path="res://assets/slime.png" id="2_50sbk"]
+[ext_resource type="Texture2D" uid="uid://c0e2kq7w6uev8" path="res://assets/healthbarUnder.png" id="3_uopxf"]
+[ext_resource type="Texture2D" uid="uid://6pbjtrnwxctw" path="res://assets/healthbarProgress.png" id="4_vaxo3"]
+[ext_resource type="Script" path="res://scenes/HealthBar.gd" id="5_wru51"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3gwyh"]
-atlas = ExtResource("1_rjjxg")
+atlas = ExtResource("2_50sbk")
 region = Rect2(0, 128, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ug681"]
-atlas = ExtResource("1_rjjxg")
+atlas = ExtResource("2_50sbk")
 region = Rect2(32, 128, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_khivf"]
-atlas = ExtResource("1_rjjxg")
+atlas = ExtResource("2_50sbk")
 region = Rect2(64, 128, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jfu0v"]
-atlas = ExtResource("1_rjjxg")
+atlas = ExtResource("2_50sbk")
 region = Rect2(96, 128, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gp7bp"]
-atlas = ExtResource("1_rjjxg")
+atlas = ExtResource("2_50sbk")
 region = Rect2(128, 128, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fwcls"]
-atlas = ExtResource("1_rjjxg")
+atlas = ExtResource("2_50sbk")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qhsqx"]
-atlas = ExtResource("1_rjjxg")
+atlas = ExtResource("2_50sbk")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f8coc"]
-atlas = ExtResource("1_rjjxg")
+atlas = ExtResource("2_50sbk")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d0bnr"]
-atlas = ExtResource("1_rjjxg")
+atlas = ExtResource("2_50sbk")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0gec6"]
-atlas = ExtResource("1_rjjxg")
+atlas = ExtResource("2_50sbk")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3n2fc"]
-atlas = ExtResource("1_rjjxg")
+atlas = ExtResource("2_50sbk")
 region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dumpn"]
-atlas = ExtResource("1_rjjxg")
+atlas = ExtResource("2_50sbk")
 region = Rect2(64, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mhf8f"]
-atlas = ExtResource("1_rjjxg")
+atlas = ExtResource("2_50sbk")
 region = Rect2(96, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c181n"]
-atlas = ExtResource("1_rjjxg")
+atlas = ExtResource("2_50sbk")
 region = Rect2(128, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a62nx"]
-atlas = ExtResource("1_rjjxg")
+atlas = ExtResource("2_50sbk")
 region = Rect2(160, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jkvmh"]
@@ -139,8 +139,9 @@ radius = 5.0
 radius = 11.0
 
 [node name="Enemy" type="CharacterBody2D"]
+scale = Vector2(4.76, 4.76)
 collision_layer = 3
-script = ExtResource("1_74jgi")
+script = ExtResource("1_xfqd1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -150,6 +151,7 @@ animation = &"idle"
 frame_progress = 0.820688
 
 [node name="detection_area" type="Area2D" parent="."]
+scale = Vector2(0.700808, 0.700808)
 collision_layer = 2
 collision_mask = 2
 
@@ -172,9 +174,9 @@ offset_top = -14.0
 offset_right = 55.0
 offset_bottom = 26.0
 scale = Vector2(0.280001, 0.280001)
-texture_under = ExtResource("3_40kks")
-texture_progress = ExtResource("4_u0i0y")
-script = ExtResource("3_8qm0g")
+texture_under = ExtResource("3_uopxf")
+texture_progress = ExtResource("4_vaxo3")
+script = ExtResource("5_wru51")
 
 [connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]
