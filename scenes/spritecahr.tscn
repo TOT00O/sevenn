@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://b67c184owy1c"]
+[gd_scene load_steps=67 format=3 uid="uid://b67c184owy1c"]
 
 [ext_resource type="Script" path="res://scripts/spritecahr.gd" id="1_8pbxg"]
 [ext_resource type="Texture2D" uid="uid://dbrr4agelt4xa" path="res://assets/Hana Caraka - Base Character [sample]/idle.png" id="1_yatae"]
@@ -9,7 +9,6 @@
 [ext_resource type="Script" path="res://scenes/Camera2D.gd" id="7_crr4t"]
 [ext_resource type="PackedScene" uid="uid://dvodvvjpndjmk" path="res://scenes/axe.tscn" id="7_ncoki"]
 [ext_resource type="Texture2D" uid="uid://c32pvev4q06aw" path="res://assets/Hearts/PNG/basic/heart.png" id="8_1qqe3"]
-[ext_resource type="Texture2D" uid="uid://dpmc83ayrx0cf" path="res://assets/darkness.png" id="10_b6j1c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_si5qk"]
 atlas = ExtResource("1_yatae")
@@ -657,13 +656,6 @@ shape = SubResource("CircleShape2D_wjrp4")
 
 [node name="attack_cooldown" type="Timer" parent="."]
 wait_time = 2.0
-
-[node name="dark" type="CanvasLayer" parent="."]
-
-[node name="TextureRect" type="TextureRect" parent="dark"]
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("10_b6j1c")
 
 [connection signal="body_entered" from="Weposn/axe" to="." method="_on_axe_body_entered"]
 [connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
