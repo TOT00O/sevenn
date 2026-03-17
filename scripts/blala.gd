@@ -1,6 +1,6 @@
 extends CharacterBody2D
-#BOSSSES CODE
-var speed = 10
+#big bosssess
+var speed = 100
 var player_chase = false
 var player = null
 
@@ -47,7 +47,12 @@ func take_damage(amount: int):
 	print("Enemy health: ", health)
 	
 	health_bar.visible = true
-	health_bar.update_health(health)  # passes int safely
+	health_bar.value = health
 	
 	if health <= 0:
 		queue_free()
+
+
+# ✅ THIS IS THE IMPORTANT PART (add this)
+func betterenemy():
+	return true

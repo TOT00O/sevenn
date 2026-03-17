@@ -47,7 +47,16 @@ func take_damage(amount: int):
 	print("Enemy health: ", health)
 	
 	health_bar.visible = true
-	health_bar.update_health(health)  # passes int safely
+	health_bar.value = health
 	
 	if health <= 0:
-		queue_free()
+		die()
+
+
+
+func betterenemy():
+	return true
+
+func die():
+	get_parent().enemy_killed()
+	queue_free()

@@ -1,13 +1,20 @@
 extends Node2D
 
+var enemies_left = 4  
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
+	$CharacterBody2D/Camera2D.zoom = Vector2(2, 2)
 	
-	$CharacterBody2D/Camera2D.zoom = Vector2(2, 2) # 
+	$boss.visible = false  
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+
+func enemy_killed():
+	enemies_left -= 1
+	print("Enemies left: ", enemies_left)
 	
-	pass
+	if enemies_left <= 0:
+		spawn_boss()
+
+
+func spawn_boss():
+	$boss.visible = true
