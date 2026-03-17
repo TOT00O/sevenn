@@ -64,7 +64,8 @@ func _physics_process(_delta):
 	# Update movement animations if not attacking
 	if not attacking:
 		update_animation(direction)
-
+	
+	mazething()
 
 # ---------------- wlaking ---------------- #
 
@@ -183,7 +184,11 @@ func set_hearts(health_amount: int):
 
 
 
-
+func mazething():
+	if Global.maze:
+		$dark.visible = true
+	else:
+		$dark.visible = false
 
 
 

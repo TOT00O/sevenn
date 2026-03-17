@@ -2,6 +2,7 @@ extends Node2D
 
 var Canvas = preload("res://scenes/key_canvas.tscn")
 
+
 func _ready():
 	
 	if NavigationManger.spawn_door_tag != null:
@@ -9,6 +10,8 @@ func _ready():
 	
 	key_collect()
 	print(Global.opened_doors)
+	
+	Global.maze = true
 		
 
 func _on_level_spawn(destination_tag: String):
