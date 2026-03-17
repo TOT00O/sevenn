@@ -9,7 +9,6 @@ func _ready():
 		_on_level_spawn(NavigationManger.spawn_door_tag)
 	
 	key_collect()
-	print(Global.opened_doors)
 	
 	Global.maze = true
 		

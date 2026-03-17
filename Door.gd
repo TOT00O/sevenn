@@ -8,7 +8,7 @@ func _on_area_2d_body_entered(body):
 		$AnimationPlayer.play("open")
 		await $AnimationPlayer.animation_finished
 		Global.opened_doors.append(str(self.name))
-		print(Global.opened_doors)
+		
 		queue_free()
 	if not "key" + self.name in Global.key_found:
 		$AnimationPlayer.play("closed")

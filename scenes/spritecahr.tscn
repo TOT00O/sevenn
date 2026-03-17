@@ -662,8 +662,9 @@ wait_time = 2.0
 visible = false
 
 [node name="TextureRect" type="TextureRect" parent="dark"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -50.0
+offset_right = 1152.0
+offset_bottom = 681.0
 texture = ExtResource("10_b6j1c")
 
 [connection signal="body_entered" from="Weposn/axe" to="." method="_on_axe_body_entered"]
