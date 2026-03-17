@@ -659,6 +659,7 @@ shape = SubResource("CircleShape2D_wjrp4")
 wait_time = 2.0
 
 [node name="dark" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="TextureRect" type="TextureRect" parent="dark"]
 offset_right = 40.0
