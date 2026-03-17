@@ -25,6 +25,7 @@ var last_direction = Vector2.DOWN
 var attacking = false   # Track if currently attacking
 
 func _ready():
+	
 	weapon_node.visible = false
 	animation_player.animation_finished.connect(_on_animation_finished)
 

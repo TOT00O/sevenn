@@ -3,6 +3,7 @@ extends Node2D
 var Canvas = preload("res://scenes/key_canvas.tscn")
 
 func _ready():
+	
 	if NavigationManger.spawn_door_tag != null:
 		_on_level_spawn(NavigationManger.spawn_door_tag)
 	
