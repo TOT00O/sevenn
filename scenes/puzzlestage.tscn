@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c42if738jmbad"]
+[gd_scene load_steps=8 format=3 uid="uid://bgu8164wtpgs8"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_jkx8j"]
 [ext_resource type="Texture2D" uid="uid://c05yp77q66i0a" path="res://assets/Solaria Demo Tiles.png" id="2_cm28n"]
@@ -1154,8 +1154,6 @@ scale = Vector2(0.1, 0.1)
 [node name="CharacterBody2D" parent="." instance=ExtResource("4_0dy63")]
 visibility_layer = 3
 position = Vector2(34, 47)
-
-[node name="doors" type="Node" parent="."]
 
 [node name="keyDoor" parent="." instance=ExtResource("5_1x7er")]
 visible = false
