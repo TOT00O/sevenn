@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://iph28qlrkolg"]
+
+[ext_resource type="Texture2D" uid="uid://ba0m4s6molgct" path="res://assets/EAAAAASUVORK5CYII.png" id="1_vuii0"]
+[ext_resource type="Script" path="res://waypoint_marker.gd" id="2_xcnl7"]
+
+[node name="waypoint_marker" type="Sprite2D"]
+position = Vector2(-40, 209)
+rotation = 1.5708
+texture = ExtResource("1_vuii0")
+script = ExtResource("2_xcnl7")
