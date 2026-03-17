@@ -2,6 +2,9 @@ extends CanvasLayer
 
 func _ready():
 	show_key()
+
+func _process(delta):
+	show_key()
 	hide_key()
 	delete_canvas()
 	
