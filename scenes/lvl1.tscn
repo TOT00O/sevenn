@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c05yp77q66i0a" path="res://assets/Solaria Demo Tiles.png" id="1_exfyt"]
 [ext_resource type="PackedScene" uid="uid://b67c184owy1c" path="res://scenes/spritecahr.tscn" id="2_n35nu"]
-[ext_resource type="PackedScene" uid="uid://b5vllwfd4icuf" path="res://scenes/door.tscn" id="3_p32kx"]
+[ext_resource type="PackedScene" uid="uid://bih2ucbqsqpvt" path="res://scenes/door.tscn" id="3_p32kx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tekve"]
 texture = ExtResource("1_exfyt")
@@ -1151,11 +1151,5 @@ position = Vector2(183, 373)
 
 [node name="door_2" parent="doors" instance=ExtResource("3_p32kx")]
 position = Vector2(16, 383)
-destination_level_tag = "start"
-destination_door_tag = "1"
-spawn_direction = "right"
-
-[node name="spawn" parent="doors/door_2" index="1"]
-position = Vector2(22, 0)
 
 [editable path="doors/door_2"]
