@@ -1,6 +1,6 @@
 [gd_scene load_steps=25 format=3 uid="uid://c4u5wxis2311r"]
 
-[ext_resource type="Script" path="res://scripts/betterenemy.gd" id="1_xfqd1"]
+[ext_resource type="Script" path="res://scripts/blala.gd" id="1_t1dji"]
 [ext_resource type="Texture2D" uid="uid://dvebc6i21qtlt" path="res://assets/slime.png" id="2_50sbk"]
 [ext_resource type="Texture2D" uid="uid://c0e2kq7w6uev8" path="res://assets/healthbarUnder.png" id="3_uopxf"]
 [ext_resource type="Texture2D" uid="uid://6pbjtrnwxctw" path="res://assets/healthbarProgress.png" id="4_vaxo3"]
@@ -141,7 +141,7 @@ radius = 11.0
 [node name="Enemy" type="CharacterBody2D"]
 scale = Vector2(4.76, 4.76)
 collision_layer = 3
-script = ExtResource("1_xfqd1")
+script = ExtResource("1_t1dji")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

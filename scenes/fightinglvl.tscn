@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cn54rxjvtdbjh"]
+[gd_scene load_steps=9 format=3 uid="uid://cn54rxjvtdbjh"]
 
 [ext_resource type="Script" path="res://scenes/fightinglvl.gd" id="1_of14y"]
 [ext_resource type="Texture2D" uid="uid://c05yp77q66i0a" path="res://assets/Solaria Demo Tiles.png" id="2_rcq71"]
 [ext_resource type="PackedScene" uid="uid://b67c184owy1c" path="res://scenes/spritecahr.tscn" id="4_it23s"]
 [ext_resource type="PackedScene" uid="uid://c4u5wxis2311r" path="res://scenes/boss.tscn" id="5_68w1y"]
 [ext_resource type="PackedScene" uid="uid://jiv7sad6klbu" path="res://scenes/betterenemy.tscn" id="5_nylt1"]
+[ext_resource type="PackedScene" uid="uid://dwvvlwm4onfb8" path="res://scenes/pause_menu.tscn" id="6_gcegh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tekve"]
 texture = ExtResource("2_rcq71")
@@ -1163,3 +1164,7 @@ position = Vector2(547, 253)
 
 [node name="boss" parent="." instance=ExtResource("5_68w1y")]
 position = Vector2(982, 332)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("6_gcegh")]
