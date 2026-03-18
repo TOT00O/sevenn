@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://djdjbpue3dskv"]
 
 [ext_resource type="Texture2D" uid="uid://c05yp77q66i0a" path="res://assets/Solaria Demo Tiles.png" id="1_h4ccc"]
-[ext_resource type="Resource" uid="uid://be56o8vyttt8x" path="res://inventory/items/weapon1.tres" id="2_66qvi"]
+[ext_resource type="Resource" path="res://inventory/items/weapon1.tres" id="2_66qvi"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7k3yk"]
 
