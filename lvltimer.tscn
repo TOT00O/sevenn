@@ -1,11 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://dbfu5uadqg4hj"]
+[gd_scene load_steps=2 format=3 uid="uid://m5jayo46jx23"]
 
-[ext_resource type="Script" path="res://lvltimer.gd" id="1_4cw67"]
+[sub_resource type="GDScript" id="GDScript_vvvot"]
+script/source = "extends Timer
+
+func _ready():
+	$lvltimer.start()
+
+
+func _on_timeout():
+	print(\"Time's up!\")
+	get_tree().reload_current_scene()
+"
 
 [node name="lvltimer" type="Timer"]
 wait_time = 60.0
 one_shot = true
 autostart = true
-script = ExtResource("1_4cw67")
+script = SubResource("GDScript_vvvot")
 
 [connection signal="timeout" from="." to="." method="_on_timeout"]
