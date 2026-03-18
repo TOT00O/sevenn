@@ -4,10 +4,11 @@
 [ext_resource type="Script" path="res://scenes/key_canvas.gd" id="1_xaw3m"]
 
 [node name="KeyCanvas" type="CanvasLayer"]
+layer = 2
 script = ExtResource("1_xaw3m")
 
 [node name="keyDoor" type="Sprite2D" parent="."]
-visible = false
+z_index = 20
 position = Vector2(1072, 66)
 scale = Vector2(0.03, 0.03)
 texture = ExtResource("1_skd4i")

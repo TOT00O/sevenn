@@ -11,6 +11,8 @@ func _ready():
 	key_collect()
 	
 	Global.maze = true
+
+	
 		
 
 func _on_level_spawn(destination_tag: String):
@@ -28,3 +30,7 @@ func key_collect():
 			get_node("key_canvas").show_key()
 			
 			
+
+
+
+

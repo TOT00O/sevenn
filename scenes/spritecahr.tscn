@@ -663,6 +663,7 @@ wait_time = 2.0
 visible = false
 
 [node name="TextureRect" type="TextureRect" parent="dark"]
+self_modulate = Color(1, 1, 1, 0.627451)
 offset_left = -50.0
 offset_right = 1152.0
 offset_bottom = 681.0

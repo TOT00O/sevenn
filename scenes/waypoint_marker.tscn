@@ -4,7 +4,10 @@
 [ext_resource type="Script" path="res://waypoint_marker.gd" id="2_xcnl7"]
 
 [node name="waypoint_marker" type="Sprite2D"]
-position = Vector2(-40, 209)
-rotation = 1.5708
+z_index = 13
+position = Vector2(431, 734)
+rotation = 3.12173
+scale = Vector2(0.427414, 1.04974)
 texture = ExtResource("1_vuii0")
+offset = Vector2(374.883, 747.809)
 script = ExtResource("2_xcnl7")

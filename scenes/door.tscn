@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://blixfhxdpyu0t" path="res://assets/door.png" id="2_w0aho"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4qe1x"]
-size = Vector2(278, 187)
+size = Vector2(252, 187)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2riju"]
-size = Vector2(277, 298)
+size = Vector2(282, 298)
 
 [sub_resource type="Animation" id="Animation_urdmx"]
 length = 0.001
@@ -73,7 +73,7 @@ scale = Vector2(1, 0.748292)
 texture = ExtResource("2_w0aho")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 87.5)
+position = Vector2(14, 87.5)
 shape = SubResource("RectangleShape2D_4qe1x")
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -81,7 +81,7 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1.5, 61)
+position = Vector2(-1, 61)
 shape = SubResource("RectangleShape2D_2riju")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
