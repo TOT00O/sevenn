@@ -14,7 +14,7 @@ func _process(delta: float) -> void:
 		return
 	
 	var target_pos: Vector2 = get_parent().global_position
-	var viewport_size: Vector2 = get_viewport().get_visible_rect().size
+	var viewport_size: Vector2 = get_viewport().get_visible_rect().size * 0.2
 	var viewport_center: Vector2 = viewport_size * 0.5
 	
 	var screen_pos: Vector2 = (target_pos - camera_node.global_position) * camera_node.zoom + viewport_center

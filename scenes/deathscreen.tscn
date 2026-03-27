@@ -6,11 +6,12 @@
 script = ExtResource("1_f3wno")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 505.0
+offset_left = 535.0
 offset_top = 242.0
 offset_right = 623.0
 offset_bottom = 265.0
-text = "Player has died"
+text = "You lost 
+"
 
 [node name="Button" type="Button" parent="."]
 offset_left = 294.0

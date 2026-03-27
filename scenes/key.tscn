@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://beiske1bkks4j"]
+[gd_scene load_steps=5 format=3 uid="uid://beiske1bkks4j"]
 
 [ext_resource type="Script" path="res://scripts/key.gd" id="1_oup5j"]
 [ext_resource type="Texture2D" uid="uid://jx2uiv7hxjbg" path="res://assets/key.png" id="2_1tw24"]
 [ext_resource type="PackedScene" uid="uid://iph28qlrkolg" path="res://scenes/waypoint_marker.tscn" id="3_nq3t4"]
-[ext_resource type="Texture2D" uid="uid://cssyptq4he7di" path="res://assets/snoabl.jpg" id="4_m1fny"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_llo6u"]
 size = Vector2(126, 72)
@@ -15,7 +14,6 @@ script = ExtResource("1_oup5j")
 [node name="waypoint_marker" parent="." instance=ExtResource("3_nq3t4")]
 position = Vector2(4.76837e-07, -50)
 scale = Vector2(0.148666, 0.390603)
-texture = ExtResource("4_m1fny")
 offset = Vector2(-489.247, 40.8305)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

@@ -14,6 +14,8 @@ func _ready():
 
 	
 		
+func enemy_killed():
+	pass
 
 func _on_level_spawn(destination_tag: String):
 	var  door_path = "doors/door_" + destination_tag

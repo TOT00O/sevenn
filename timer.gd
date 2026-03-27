@@ -3,7 +3,7 @@ extends Control
 @onready var timer = $Timer
 @onready var label = $Label
 
-var time_left = 10  # 3 minutes in seconds
+var time_left = 180  # 3 minutes in seconds
 
 func _ready():
 	timer.start()

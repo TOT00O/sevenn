@@ -58,5 +58,6 @@ func betterenemy():
 	return true
 
 func die():
+	
 	get_parent().enemy_killed()
 	queue_free()
