@@ -6,7 +6,8 @@ func _ready():
 	$CharacterBody2D/Camera2D.zoom = Vector2(2, 2)
 	
 	$boss.visible = false  
-
+	
+	Global.maze = false
 
 func enemy_killed():
 	enemies_left -= 1

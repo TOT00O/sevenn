@@ -5,8 +5,6 @@ var Canvas = preload("res://scenes/key_canvas.tscn")
 
 func _ready():
 	
-	if NavigationManger.spawn_door_tag != null:
-		_on_level_spawn(NavigationManger.spawn_door_tag)
 	
 	key_collect()
 	
@@ -17,10 +15,7 @@ func _ready():
 func enemy_killed():
 	pass
 
-func _on_level_spawn(destination_tag: String):
-	var  door_path = "doors/door_" + destination_tag
-	var _door = get_node(door_path) as Door
-	NavigationManger.trigger_player_spawn(_door.spawn.global_position, _door.spawn.global_direction)
+
 	
 
 func key_collect():
@@ -36,3 +31,7 @@ func key_collect():
 
 
 
+
+
+func _on_tp_area_entered(area):
+	get_tree().change_scene_to_file("res://scenes/fightinglvl.tscn")

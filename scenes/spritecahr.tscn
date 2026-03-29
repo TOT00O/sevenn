@@ -642,6 +642,7 @@ libraries = {
 }
 
 [node name="health" type="CanvasLayer" parent="."]
+layer = 6
 
 [node name="heart" type="TextureRect" parent="health"]
 texture_filter = 1
