@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cmn504p5qtyc4"]
+[gd_scene load_steps=11 format=3 uid="uid://cmn504p5qtyc4"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_parcs"]
 [ext_resource type="Texture2D" uid="uid://c05yp77q66i0a" path="res://assets/Solaria Demo Tiles.png" id="2_tf04q"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b67c184owy1c" path="res://scenes/spritecahr.tscn" id="4_n4y7e"]
 [ext_resource type="PackedScene" uid="uid://beiske1bkks4j" path="res://scenes/key.tscn" id="5_xhn5w"]
 [ext_resource type="PackedScene" uid="uid://jiv7sad6klbu" path="res://scenes/betterenemy.tscn" id="6_2qmy5"]
+[ext_resource type="Texture2D" uid="uid://byc8relii0leq" path="res://assets/Namnlös.png" id="7_w77t3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tekve"]
 texture = ExtResource("2_tf04q")
@@ -1190,5 +1191,13 @@ position = Vector2(1078, 311)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tp"]
 shape = SubResource("RectangleShape2D_322jc")
+
+[node name="TextureRect" type="TextureRect" parent="tp"]
+offset_left = 2.0
+offset_top = -29.0
+offset_right = 252.0
+offset_bottom = 252.0
+scale = Vector2(0.130743, 0.158552)
+texture = ExtResource("7_w77t3")
 
 [connection signal="area_entered" from="tp" to="." method="_on_tp_area_entered"]

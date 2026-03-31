@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://b67c184owy1c" path="res://scenes/spritecahr.tscn" id="4_it23s"]
 [ext_resource type="PackedScene" uid="uid://c4u5wxis2311r" path="res://scenes/boss.tscn" id="5_68w1y"]
 [ext_resource type="PackedScene" uid="uid://jiv7sad6klbu" path="res://scenes/betterenemy.tscn" id="5_nylt1"]
-[ext_resource type="PackedScene" uid="uid://dwvvlwm4onfb8" path="res://scenes/pause_menu.tscn" id="6_gcegh"]
 [ext_resource type="PackedScene" uid="uid://bxwsgboptwrcj" path="res://timer.tscn" id="7_1y3ec"]
+[ext_resource type="Texture2D" uid="uid://byc8relii0leq" path="res://assets/Namnlös.png" id="7_ajrdn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tekve"]
 texture = ExtResource("2_rcq71")
@@ -1145,6 +1145,12 @@ position = Vector2(982, 332)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("6_gcegh")]
-
 [node name="timer" parent="CanvasLayer" instance=ExtResource("7_1y3ec")]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -26.0
+offset_top = 242.0
+offset_right = 224.0
+offset_bottom = 523.0
+scale = Vector2(0.130743, 0.158552)
+texture = ExtResource("7_ajrdn")

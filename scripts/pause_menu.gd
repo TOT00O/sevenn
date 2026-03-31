@@ -1,5 +1,6 @@
 extends Control
 @onready var optionsMenu = preload("res://scripts/game.gd")
+
 func _ready():
 	$AnimationPlayer.play("RESET")
 
